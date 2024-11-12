@@ -13,5 +13,6 @@ namespace UdemyNewMicroservice.Catalog.Api.Features.Courses
         public DateTime Created { get; set; } //Uygulamalar yaparken özellikle global çalışırken offsett ile çalışması önerilir. +3 gibi zom bilgisi taşırlar , datetime taşımaz.
         public Guid CategoryId { get; set; }
         public Category Category { get; set; } = default!;
+        public Feature Feature { get; set; } = default!;
     }
 }
