@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35424.110 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6687182A-DB14-4F36-AFCC-49459E37D8B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{E566166A-35B3-4E74-A9CF-91F29B71EECA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "catalog", "catalog", "{10F76545-EFD0-4F70-8413-35854D819924}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemyNewMicroservice.Catalog.Api", "src\services\catalog\UdemyNewMicroservice.Catalog.Api\UdemyNewMicroservice.Catalog.Api.csproj", "{72A0A20B-37AE-4D2D-A673-97AE7B16C69A}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4C92E835-17C8-49CA-9EFB-9A6F8B5DC604}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72A0A20B-37AE-4D2D-A673-97AE7B16C69A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72A0A20B-37AE-4D2D-A673-97AE7B16C69A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72A0A20B-37AE-4D2D-A673-97AE7B16C69A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72A0A20B-37AE-4D2D-A673-97AE7B16C69A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C92E835-17C8-49CA-9EFB-9A6F8B5DC604}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C92E835-17C8-49CA-9EFB-9A6F8B5DC604}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C92E835-17C8-49CA-9EFB-9A6F8B5DC604}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C92E835-17C8-49CA-9EFB-9A6F8B5DC604}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E566166A-35B3-4E74-A9CF-91F29B71EECA} = {6687182A-DB14-4F36-AFCC-49459E37D8B4}
+		{10F76545-EFD0-4F70-8413-35854D819924} = {E566166A-35B3-4E74-A9CF-91F29B71EECA}
+		{72A0A20B-37AE-4D2D-A673-97AE7B16C69A} = {10F76545-EFD0-4F70-8413-35854D819924}
+	EndGlobalSection
+EndGlobal
