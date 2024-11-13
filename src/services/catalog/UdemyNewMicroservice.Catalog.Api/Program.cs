@@ -1,10 +1,12 @@
 using UdemyNewMicroservice.Catalog.Api.Options;
+using UdemyNewMicroservice.Catalog.Api.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddMongoOptionExt();
+builder.Services.AddOptionExt();
+builder.Services.AddDataabaseServiceExt();
 
 var app = builder.Build();
 
