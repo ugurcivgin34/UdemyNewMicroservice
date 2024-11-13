@@ -1,3 +1,4 @@
+using UdemyNewMicroservice.Catalog.Api.Features.Categories;
 using UdemyNewMicroservice.Catalog.Api.Options;
 using UdemyNewMicroservice.Catalog.Api.Repositories;
 
@@ -9,6 +10,8 @@ builder.Services.AddOptionExt();
 builder.Services.AddDataabaseServiceExt();
 
 var app = builder.Build();
+
+app.AddCategoryGroupEndpointExt();
 
 if (app.Environment.IsDevelopment())
 {
