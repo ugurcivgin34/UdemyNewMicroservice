@@ -120,6 +120,7 @@ namespace UdemyNewMicroservice.Shared
     public class ServiceResult<T> : ServiceResult
     {
         public T? Data { get; set; }
+        [JsonIgnore]
         public string? UrlAsCreated { get; set; }
 
         //200
