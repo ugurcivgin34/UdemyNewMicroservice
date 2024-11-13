@@ -30,7 +30,7 @@ namespace UdemyNewMicroservice.Shared
             return new ServiceResult
             {
                 Status = HttpStatusCode.NoContent,
-                Fail = new Microsoft.AspNetCore.Mvc.ProblemDetails
+                Fail = new ProblemDetails
                 {
                     Title = "Not Found",
                     Detail = "The requested resource was not found"
@@ -133,7 +133,7 @@ namespace UdemyNewMicroservice.Shared
         }
 
         //201 => Created=> respones body header => location = api/products/5
-        public static ServiceResult<T> SuccessAsCreeated(T data, string url)
+        public static ServiceResult<T> SuccessAsCreated(T data, string url)
         {
             return new ServiceResult<T>
             {
