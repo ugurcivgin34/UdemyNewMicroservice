@@ -11,7 +11,6 @@ namespace UdemyNewMicroservice.Catalog.Api.Repositories
             {
                 var options = sp.GetRequiredService<MongoOption>();
                 return new MongoClient(options.ConnectionString);
-
             });
 
             services.AddScoped(sp =>

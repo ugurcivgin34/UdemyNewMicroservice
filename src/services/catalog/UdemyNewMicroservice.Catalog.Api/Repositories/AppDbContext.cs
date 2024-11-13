@@ -21,15 +21,12 @@ namespace UdemyNewMicroservice.Catalog.Api.Repositories
             return new AppDbContext(optionsBuilder.Options);
         }
 
-
         //Collection tablo ismi
         //Document satır ismi
         //field sutun ismi
-        override protected void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());//Bu assembly içerisindeki bütün configurationları al.UdemyNewMicroservice.Catalog.Api
-
         }
     }
 }
