@@ -5,7 +5,7 @@ namespace UdemyNewMicroservice.Shared.Extensions
 {
     public static class EndpointResultExt
     {
-       public static IResult ToGenericResult<T>(this ServiceResult<T> result)
+        public static IResult ToGenericResult<T>(this ServiceResult<T> result)
         {
             return result.Status switch
             {

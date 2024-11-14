@@ -10,7 +10,7 @@ namespace UdemyNewMicroservice.Catalog.Api.Features.Categories.GetAll
 {
     public class GetAllCategoryQuery : IRequest<ServiceResult<List<CategoryDto>>>;
 
-    public class GetAllCategoryQueryHandler(AppDbContext context,IMapper mapper) : IRequestHandler<GetAllCategoryQuery, ServiceResult<List<CategoryDto>>>
+    public class GetAllCategoryQueryHandler(AppDbContext context, IMapper mapper) : IRequestHandler<GetAllCategoryQuery, ServiceResult<List<CategoryDto>>>
     {
         public async Task<ServiceResult<List<CategoryDto>>> Handle(GetAllCategoryQuery request, CancellationToken cancellationToken)
         {

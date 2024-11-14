@@ -8,7 +8,6 @@ using UdemyNewMicroservice.Shared.Extensions;
 
 namespace UdemyNewMicroservice.Catalog.Api.Features.Categories.GetById
 {
-
     public record GetAllCategoryQuery(Guid Id) : IRequest<ServiceResult<CategoryDto>>;
 
     public class GetCategoryByIdHandler(AppDbContext context, IMapper mapper) : IRequestHandler<GetAllCategoryQuery, ServiceResult<CategoryDto>>
@@ -27,7 +26,6 @@ namespace UdemyNewMicroservice.Catalog.Api.Features.Categories.GetById
         }
     }
 
-
     public static class GetCategoryByIdEndpoint
     {
         public static RouteGroupBuilder GetByIdCategoryGroupItemEndpoint(this RouteGroupBuilder group)
@@ -37,7 +35,6 @@ namespace UdemyNewMicroservice.Catalog.Api.Features.Categories.GetById
                     (await mediator.Send(new GetAllCategoryQuery(id))).ToGenericResult());
 
             return group;
-
         }
     }
 }

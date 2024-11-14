@@ -8,10 +8,10 @@ namespace UdemyNewMicroservice.Shared.Filters
     {
         public async ValueTask<object?> InvokeAsync(EndpointFilterInvocationContext context, EndpointFilterDelegate next)
         {
-            var validator = context.HttpContext.RequestServices.GetService<IValidator<T>>(); 
+            var validator = context.HttpContext.RequestServices.GetService<IValidator<T>>();
 
             //Fast Fail
-            if(validator is null)
+            if (validator is null)
             {
                 return await next(context);
             }
@@ -21,16 +21,14 @@ namespace UdemyNewMicroservice.Shared.Filters
             if (requestModel is null)
             {
                 return await next(context);
-
             }
 
             var validateResult = await validator.ValidateAsync(requestModel);
 
-            if(!validateResult.IsValid)
+            if (!validateResult.IsValid)
             {
                 return Results.ValidationProblem(validateResult.ToDictionary());
             }
-
 
             return await next(context);
         }
