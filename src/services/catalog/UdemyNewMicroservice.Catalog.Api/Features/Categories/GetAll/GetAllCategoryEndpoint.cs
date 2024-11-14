@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using UdemyNewMicroservice.Catalog.Api.Features.Categories.Dtos;
 using UdemyNewMicroservice.Catalog.Api.Repositories;
@@ -9,13 +10,13 @@ namespace UdemyNewMicroservice.Catalog.Api.Features.Categories.GetAll
 {
     public class GetAllCategoryQuery : IRequest<ServiceResult<List<CategoryDto>>>;
 
-    public class GetAllCategoryQueryHandler(AppDbContext context) : IRequestHandler<GetAllCategoryQuery, ServiceResult<List<CategoryDto>>>
+    public class GetAllCategoryQueryHandler(AppDbContext context,IMapper mapper) : IRequestHandler<GetAllCategoryQuery, ServiceResult<List<CategoryDto>>>
     {
         public async Task<ServiceResult<List<CategoryDto>>> Handle(GetAllCategoryQuery request, CancellationToken cancellationToken)
         {
-            var categories = await context.Categories.ToListAsync();
-            var categoryDtos = categories.Select(x => new CategoryDto(x.Id, x.Name)).ToList();
-            return ServiceResult<List<CategoryDto>>.SuccessAsOk(categoryDtos);
+            var categories = await context.Categories.ToListAsync(cancellationToken: cancellationToken);
+            var categoriesAsDto = mapper.Map<List<CategoryDto>>(categories);
+            return ServiceResult<List<CategoryDto>>.SuccessAsOk(categoriesAsDto);
         }
     }
 
