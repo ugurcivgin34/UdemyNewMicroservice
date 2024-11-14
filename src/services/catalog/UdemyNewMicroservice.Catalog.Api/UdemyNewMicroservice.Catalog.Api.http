@@ -12,3 +12,6 @@ Content-Type: application/json
   "description": "Category 1 Description"
 }
 ###
+
+GET {{baseAddress}}/api/categories/08dd041d-5835-2e46-b025-aa5780660000
+Accept: application/json
