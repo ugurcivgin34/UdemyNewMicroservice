@@ -5,15 +5,14 @@ namespace UdemyNewMicroservice.Shared.Extensions
 {
     public static class EndpointResultExt
     {
-        public static IResult ToGenericResult<T>(this ServiceResult<T> result)
+       public static IResult ToGenericResult<T>(this ServiceResult<T> result)
         {
             return result.Status switch
             {
                 HttpStatusCode.OK => Results.Ok(result.Data),
-                HttpStatusCode.Created => Results.Created(result.UrlAsCreated,result.Data),
-                HttpStatusCode.NoContent => Results.NoContent(),
+                HttpStatusCode.Created => Results.Created(result.UrlAsCreated, result.Data),
                 HttpStatusCode.NotFound => Results.NotFound(result.Fail!),
-                _ => Results.Problem(result.Fail!) 
+                _ => Results.Problem(result.Fail!)
             };
         }
 
