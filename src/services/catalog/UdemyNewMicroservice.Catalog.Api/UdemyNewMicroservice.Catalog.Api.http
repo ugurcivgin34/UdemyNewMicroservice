@@ -1,17 +1,56 @@
 @baseAddress = http://localhost:5132
+@categoryId=08dd067e-24eb-3bca-b025-aa5780660000
+@courseId=08dd067e-3e44-597d-b025-aa5780660000
+@userId=80660000-aa57-b025-1d6e-08dd06843071
 
-GET {{baseAddress}}/api/categories
+GET {{baseAddress}}/api/v1/categories
 Accept: application/json
 ###
-
-Post {{baseAddress}}/api/categories
+Post {{baseAddress}}/api/v1/categories
 Accept: application/json
 Content-Type: application/json
 {
-  "name": "Category 1",
-  "description": "Category 1 Description"
+  "name": "Category 1"
 }
 ###
-
-GET {{baseAddress}}/api/categories/08dd041d-5835-2e46-b025-aa5780660000
+GET {{baseAddress}}/api/v1/categories/{{categoryId}}
 Accept: application/json
+###
+POST {{baseAddress}}/api/v1/courses
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "New Course 1",
+  "description": "This is a new course",
+  "price": 99.99,
+  "imageUrl": "http://example.com/picture.jpg",
+  "categoryId": "{{categoryId}}"
+}
+###
+PUT {{baseAddress}}/api/v1/courses
+Accept: application/json
+Content-Type: application/json
+
+{
+  "Id": "{{courseId}}",
+  "name": "New Course 33",
+  "description": "This is a new course 33",
+  "price": 199.99,
+  "imageUrl": "http://example.com/picture2.jpg",
+  "categoryId": "{{categoryId}}"
+}
+###
+GET {{baseAddress}}/api/v1/courses
+Accept: application/json
+###
+GET {{baseAddress}}/api/v1/courses/{{courseId}}
+Accept: application/json
+###
+Delete {{baseAddress}}/api/v1/courses/{{courseId}}
+Accept: application/json
+###
+Get {{baseAddress}}/api/v1/courses/user/{{userId}}
+Accept: application/json
+###
+

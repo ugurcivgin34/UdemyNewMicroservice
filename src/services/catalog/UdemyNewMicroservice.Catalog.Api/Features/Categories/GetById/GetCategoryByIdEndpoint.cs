@@ -1,12 +1,4 @@
-﻿using AutoMapper;
-using MediatR;
-using System.Net;
-using UdemyNewMicroservice.Catalog.Api.Features.Categories.Dtos;
-using UdemyNewMicroservice.Catalog.Api.Repositories;
-using UdemyNewMicroservice.Shared;
-using UdemyNewMicroservice.Shared.Extensions;
-
-namespace UdemyNewMicroservice.Catalog.Api.Features.Categories.GetById
+﻿namespace UdemyNewMicroservice.Catalog.Api.Features.Categories.GetById
 {
     public record GetAllCategoryQuery(Guid Id) : IRequestByServiceResult<CategoryDto>;
 
@@ -32,7 +24,9 @@ namespace UdemyNewMicroservice.Catalog.Api.Features.Categories.GetById
         {
             group.MapGet("/{id:guid}",
                 async (IMediator mediator, Guid id) =>
-                    (await mediator.Send(new GetAllCategoryQuery(id))).ToGenericResult());
+                    (await mediator.Send(new GetAllCategoryQuery(id))).ToGenericResult())
+                .WithName("GetByIdCategory")
+                .MapToApiVersion(1, 0);
 
             return group;
         }

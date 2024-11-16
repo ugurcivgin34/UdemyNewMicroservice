@@ -1,6 +1,4 @@
-﻿using UdemyNewMicroservice.Shared;
-
-namespace UdemyNewMicroservice.Catalog.Api.Features.Categories.Create
+﻿namespace UdemyNewMicroservice.Catalog.Api.Features.Categories.Create
 {
     //Diğer hali aşağıdaki gibidir...Record tanımlamamızın sebebi oluşturulduktan sonra propertlerinin değiştirilmemesinin istemememiz
     public record CreateCategoryCommand(string Name) : IRequestByServiceResult<CreateCategoryResponse>;

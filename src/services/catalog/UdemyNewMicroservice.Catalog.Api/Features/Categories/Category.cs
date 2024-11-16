@@ -1,5 +1,4 @@
 ﻿using UdemyNewMicroservice.Catalog.Api.Features.Courses;
-using UdemyNewMicroservice.Catalog.Api.Repositories;
 
 namespace UdemyNewMicroservice.Catalog.Api.Features.Categories
 {
