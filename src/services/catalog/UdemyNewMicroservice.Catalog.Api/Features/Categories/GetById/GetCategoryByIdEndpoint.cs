@@ -8,7 +8,7 @@ using UdemyNewMicroservice.Shared.Extensions;
 
 namespace UdemyNewMicroservice.Catalog.Api.Features.Categories.GetById
 {
-    public record GetAllCategoryQuery(Guid Id) : IRequest<ServiceResult<CategoryDto>>;
+    public record GetAllCategoryQuery(Guid Id) : IRequestByServiceResult<CategoryDto>;
 
     public class GetCategoryByIdHandler(AppDbContext context, IMapper mapper) : IRequestHandler<GetAllCategoryQuery, ServiceResult<CategoryDto>>
     {
