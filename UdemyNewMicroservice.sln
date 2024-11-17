@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{2A79E9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemyNewMicroservice.Shared", "src\shared\UdemyNewMicroservice.Shared\UdemyNewMicroservice.Shared.csproj", "{1FA9EAC6-146E-47F2-BABD-6C233574D821}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "basket", "basket", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemyNewMicroservice.Basket.Api", "src\basket\UdemyNewMicroservice.Basket.Api\UdemyNewMicroservice.Basket.Api.csproj", "{C419A1A0-4FB7-412F-8E71-6FF3BE11BF09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,10 @@ Global
 		{1FA9EAC6-146E-47F2-BABD-6C233574D821}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FA9EAC6-146E-47F2-BABD-6C233574D821}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FA9EAC6-146E-47F2-BABD-6C233574D821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C419A1A0-4FB7-412F-8E71-6FF3BE11BF09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C419A1A0-4FB7-412F-8E71-6FF3BE11BF09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C419A1A0-4FB7-412F-8E71-6FF3BE11BF09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C419A1A0-4FB7-412F-8E71-6FF3BE11BF09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,5 +53,10 @@ Global
 		{72A0A20B-37AE-4D2D-A673-97AE7B16C69A} = {10F76545-EFD0-4F70-8413-35854D819924}
 		{2A79E94F-9AC4-40DB-A6AE-FEDBA2740BD1} = {6687182A-DB14-4F36-AFCC-49459E37D8B4}
 		{1FA9EAC6-146E-47F2-BABD-6C233574D821} = {2A79E94F-9AC4-40DB-A6AE-FEDBA2740BD1}
+		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {E566166A-35B3-4E74-A9CF-91F29B71EECA}
+		{C419A1A0-4FB7-412F-8E71-6FF3BE11BF09} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C88135F7-612B-4325-B1D5-203A26F19FB7}
 	EndGlobalSection
 EndGlobal
