@@ -36,6 +36,7 @@ namespace UdemyNewMicroservice.Basket.Api.Features.Baskets.AddBasketItem
 
             if (existringBasketItem is not null)
             {
+                // TODO: business rule
                 currentBasket.BasketItems.Remove(existringBasketItem);
             }
 
@@ -50,6 +51,6 @@ namespace UdemyNewMicroservice.Basket.Api.Features.Baskets.AddBasketItem
         {
             var basketAsString = JsonSerializer.Serialize(basket);
             await distributedCache.SetStringAsync(cacheKey, basketAsString, cancellationToken);
-        })
+        }
     }
 }

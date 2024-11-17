@@ -7,4 +7,4 @@
         decimal Price,
         decimal? PriceByApplyDiscountRate);
 }
-}
+
